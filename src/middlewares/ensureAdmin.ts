@@ -11,4 +11,4 @@ export function ensureAdmin(request: Request, response: Response, next: NextFunc
   return response.status(401).json({
     error: "User is not admin",
   })
-}
+} 
