@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: NLW Valoriza API
+  description: API Feito no NLW ToGheter - Trilha Nodejs
+  version: 0.1.9
+
+servers:
+  - url: http://localhost:3000
+    description: Development API
+paths:
+  /users:
+    post:
+      summary: Creates a user.
+      tags:
+        - user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+
+                email:
+                  type: string
+
+                admin:
+                  type: boolean
+
+                password:
+                  type: string
+      
+      responses:
+        '200'
+          description: A list of users
