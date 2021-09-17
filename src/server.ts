@@ -5,16 +5,15 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 const app = express();
-const YAML = require('yamljs');
-const swaggerDocument = YAML.load('./swagger.yaml');
+// const YAML = require('yamljs');
+// const swaggerDocument = YAML.load('./swagger.yaml');
 
 import "./database";
 import { router } from "./routes";
 
-// import swaggerDocs from './swagger.yaml'
 
-import swaggerUi from "swagger-ui-express";
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+// import swaggerUi from "swagger-ui-express";
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 
 
